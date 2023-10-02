@@ -1,32 +1,16 @@
 import gulp from 'gulp';
 import pkg from 'gulp'
 const { src, dest, parallel, series, watch } = pkg;
-// const {
-//     src,
-//     dest,
-//     series,
-//     watch
-// } = require('gulp');
-//const deleteSync = require('del');
 import { deleteSync } from 'del';
-//const dartSass = require('sass');
 import dartSass from 'sass';
-//const gulpSass = require('gulp-sass');
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
-//const autoprefixer = require('gulp-autoprefixer');
 import autoprefixer from 'gulp-autoprefixer'
-//const gcssmq = require('gulp-group-css-media-queries');
 import gcssmq from 'gulp-group-css-media-queries'
-//const browserSync = require('browser-sync');
 import browserSync from 'browser-sync'
-//const gulpFileInclude = require('gulp-file-include');
 import gulpFileInclude from 'gulp-file-include'
-//const cleanCss = require('gulp-clean-css');
 import cleanCss from 'gulp-clean-css'
-//const rename = require('gulp-rename');
 import rename from 'gulp-rename'
-//const concat = require('gulp-concat');
 import concat from 'gulp-concat'
 
 function browsersync() {
@@ -114,4 +98,6 @@ function watch_dev() {
 }
 
 const dev = series(clean, scripts, styles, copyResources, fileInclude, gulp.parallel(watch_dev, browsersync));
+const build = series(clean, scripts, styles, copyResources, fileInclude);
 gulp.task('default', dev);
+gulp.task('build', build);

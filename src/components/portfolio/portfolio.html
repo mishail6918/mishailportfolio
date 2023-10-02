@@ -1,0 +1,29 @@
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-intro portfolio__intro">
+            <h3 class="pre-title animate-this">Portfolio</h3>
+            <h2 class="title animate-this">See my latest projects</h2>
+            <p class="text">Projects performed by the latest time. <br>
+                There are personal pet projects and commercial here too.</p>
+        </div>
+        <div class="portfolio__content">
+            @@for (var i = 0; i < arr.length; i++) {
+            <div class="portfolio__item animate-this">
+                <div class="item-wrap">
+                    <a href="`+arr[i].link+`" class="overlay" target="_blank">
+                        <img src="`+arr[i].imgSrc+`" alt="">
+                        <div class="details">
+                            <span class="details__title">`+arr[i].name+`</span>
+                            <p class="details__desc">`+arr[i].text+`</p>
+                        </div>
+                    </a>
+                    <a href="`+arr[i].repo+`" class="repo-link" target="_blank">
+                        Github
+                        <i class="fa-solid fa-arrow-turn-up"></i>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

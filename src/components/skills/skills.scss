@@ -1,0 +1,145 @@
+.skills {
+    background-color: #1f0e01;
+    background-image: url("../images/skills-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 70px 0;
+    color: rgba(255, 255, 255, 0.3);
+    &__content {
+        width: 50%;
+    }
+    &__intro {
+        text-align: left;
+    }
+    &__bars {
+        list-style: none;
+        margin-top: 70px;
+        li {
+            height: 6px;
+            background: #7c3b08;
+            width: 100%;
+            padding: 0;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+            strong {
+                position: absolute;
+                left: 0;
+                top: -3rem;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                font-size: 15px;
+                line-height: 2.4rem;
+            }
+            .percent5 {
+                width: 5%;
+            }
+            .percent10 {
+                width: 10%;
+            }
+            .percent15 {
+                width: 15%;
+            }
+            .percent20 {
+                width: 20%;
+            }
+            .percent25 {
+                width: 25%;
+            }
+            .percent30 {
+                width: 30%;
+            }
+            .percent35 {
+                width: 35%;
+            }
+            .percent40 {
+                width: 40%;
+            }
+            .percent45 {
+                width: 45%;
+            }
+            .percent50 {
+                width: 50%;
+            }
+            .percent55 {
+                width: 55%;
+            }
+            .percent60 {
+                width: 60%;
+            }
+            .percent65 {
+                width: 65%;
+            }
+            .percent70 {
+                width: 70%;
+            }
+            .percent75 {
+                width: 75%;
+            }
+            .percent80 {
+                width: 80%;
+            }
+            .percent85 {
+                width: 85%;
+            }
+            .percent90 {
+                width: 90%;
+            }
+            .percent95 {
+                width: 95%;
+            }
+            .percent100 {
+                width: 100%;
+            }
+        }
+        .progress {
+            background: #FFFFFF;
+            height: 100%;
+            position: relative;
+            span {
+                position: absolute;
+                right: 0;
+                top: -50px;
+                display: block;
+                color: white;
+                font-size: 12px;
+                font-family: "montserrat-regular", sans-serif;
+                line-height: 1;
+                background: #313131;
+                padding: 8px;
+                border-radius: 3px;
+                &:after {
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5px;
+                    margin-left: -5px;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                    border-top: 5px solid #313131;
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .skills {
+        &__content {
+            width: 70%;
+        }
+    }
+}
+@media screen and (max-width: 540px){
+    .skills {
+        padding: 40px 0px;
+        &__content {
+            width: 100%;
+        }
+    }
+}
