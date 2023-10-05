@@ -2129,8 +2129,9 @@ a {
 .about {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 50px 0px;
+  min-height: 900px;
 }
 
 .about__bg {
@@ -2299,6 +2300,7 @@ a {
   right: 30px;
   height: 60px;
   width: 60px;
+  z-index: 9;
 }
 
 .footer #go-top:hover a {
@@ -2354,7 +2356,7 @@ a {
   background-size: cover;
   background-position: center top;
   position: relative;
-  height: 100%;
+  height: 100vh;
   min-height: 900px;
 }
 
@@ -2394,7 +2396,7 @@ a {
   right: 80px;
   top: 30px;
   height: 42px;
-  width: 42px;
+  width: 140px;
   line-height: 42px;
   font-size: 15px;
   text-transform: uppercase;
@@ -2403,12 +2405,6 @@ a {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-}
-
-.header .menu-btn__text {
-  left: -75px;
-  position: absolute;
-  width: 75px;
 }
 
 .header .menu-btn__icon {
@@ -2440,15 +2436,17 @@ a {
   bottom: -9px;
 }
 
+.header .menu-btn__text {
+  padding-left: 15px;
+}
+
 .header .menu-btn--bg {
   transition: 0.3s;
   background-color: #050505;
-  width: 55px;
 }
 
 .header .menu-btn--bg .menu-btn__text {
   background-color: #050505;
-  padding-left: 15px;
 }
 
 .header .menu-wrapper {
@@ -2459,7 +2457,7 @@ a {
   line-height: 1.6;
   padding: 3.6rem 3rem;
   height: 100%;
-  width: 240px;
+  width: 20%;
   position: fixed;
   right: 0;
   top: 0;
@@ -2470,6 +2468,38 @@ a {
   -webkit-backface-visibility: hidden;
   transform: translateX(100%);
   transition: all 0.4s ease-in-out;
+}
+
+.header .menu-wrapper__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .menu-wrapper .nav-list {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header .menu-wrapper .nav-list li {
+  padding: 10px 0px;
+}
+
+.header .menu-wrapper .nav-list li a {
+  transition: 0.3s;
+}
+
+.header .menu-wrapper .nav-list li a:hover {
+  color: #fff;
+}
+
+.header .menu-wrapper__title {
+  color: #fff;
+}
+
+.header .menu-wrapper__close {
+  cursor: pointer;
 }
 
 .header .banner {
@@ -2888,10 +2918,6 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-  .about {
-    height: auto;
-  }
-
   .about .hobby__icon {
     width: 10%;
     margin-right: 10px;
@@ -2901,6 +2927,10 @@ a {
     right: 30px;
     bottom: 40px;
     font-size: 2.3rem;
+  }
+
+  .header .menu-wrapper {
+    width: 40%;
   }
 
   .portfolio .container {
@@ -2933,6 +2963,10 @@ a {
     font-size: 16px;
   }
 
+  .about {
+    height: auto;
+  }
+
   .about__bg {
     width: 100%;
     height: 52%;
@@ -2951,7 +2985,7 @@ a {
 
   .about__profile {
     padding-right: 0;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 
   .about__hobby {
@@ -2964,6 +2998,14 @@ a {
 
   .header .menu-btn {
     right: 45px;
+  }
+
+  .header .menu-wrapper {
+    width: 45%;
+  }
+
+  .header .menu-wrapper__top {
+    margin-bottom: 10px;
   }
 
   .header .scroll-icon {
@@ -3034,6 +3076,26 @@ a {
     font-size: 15px;
   }
 
+  .header {
+    min-height: 620px;
+  }
+
+  .header .scroll-icon {
+    right: 20px;
+  }
+
+  .header .banner__content {
+    height: 620px;
+  }
+
+  .header .banner__text .about-me {
+    font-size: 36px;
+  }
+
+  .header .banner .section-links {
+    margin-top: 35px;
+  }
+
   .portfolio .container {
     max-width: none;
     padding: 0;
@@ -3043,12 +3105,85 @@ a {
     height: 270px;
   }
 
+  .portfolio__item .repo-link {
+    padding: 10px 25px;
+  }
+
+  .portfolio__item .details {
+    left: 15px;
+  }
+
+  .portfolio__item .details__desc {
+    font-size: 15px;
+  }
+
   .skills {
     padding: 40px 0px;
   }
 
   .skills__content {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section-intro .title {
+    font-size: 40px;
+  }
+
+  .header .banner__content {
+    height: 600px;
+  }
+
+  .header .banner__text .about-me {
+    font-size: 34px;
+  }
+
+  .header .banner .section-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .menu-wrapper {
+    width: 60%;
+  }
+
+  .portfolio__intro .text {
+    width: 95%;
+  }
+
+  .portfolio__item {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-intro .title {
+    font-size: 35px;
+  }
+
+  .about__bg {
+    height: 53%;
+  }
+
+  .footer #go-top {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .header .menu-btn {
+    right: 30px;
+    top: 20px;
+  }
+
+  .header .menu-wrapper {
+    width: 70%;
+  }
+
+  .portfolio__item .item-wrap .details {
+    width: 85%;
   }
 }
 
