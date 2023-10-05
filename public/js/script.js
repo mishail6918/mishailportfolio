@@ -31,11 +31,10 @@ const menuOpen = function() {
     const closeBtn = nav.querySelector('.menu-wrapper__close');
 
     // open-close menu by clicking on the menu icon
-    menuTrigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        menuTrigger.classList.toggle('is-clicked');
-        body.classList.toggle('menu-is-open');
-    });
+    // menuTrigger.addEventListener('click', function () {
+    //     menuTrigger.classList.toggle('is-clicked');
+    //     body.classList.toggle('menu-is-open');
+    // });
 
     // close menu by clicking the close button
     closeBtn.addEventListener('click', function(e){
@@ -45,8 +44,12 @@ const menuOpen = function() {
 
     // close menu clicking outside the menu itself
     body.addEventListener('click', function (e) {
-        if (e.target !== menuTrigger && e.target !== nav) {
-            menuTrigger.classList.remove('is-clicled');
+        if (menuTrigger.contains(e.target)) {
+            menuTrigger.classList.toggle('is-clicked');
+            body.classList.toggle('menu-is-open');
+        }
+        else if (!nav.contains(e.target)) {
+            menuTrigger.classList.remove('is-clicked');
             body.classList.remove('menu-is-open');
         }
     });
@@ -107,7 +110,7 @@ const animations = function() {
 
 window.onscroll = function() {
     const coords = document.querySelector('.about').getBoundingClientRect();
-    if ((coords.y + pageYOffset) <= pageYOffset) {
+    if ((coords.y + pageYOffset) < pageYOffset) {
         document.querySelector('.menu-btn').classList.add('menu-btn--bg');
         document.querySelector('#go-top').style.display = 'block';
     }

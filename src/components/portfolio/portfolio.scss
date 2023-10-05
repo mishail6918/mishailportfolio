@@ -186,6 +186,39 @@
             .item-wrap {
                 height: 270px;
             }
+            .repo-link {
+                padding: 10px 25px;
+            }
+            .details {
+                left: 15px;
+                &__desc {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    .portfolio {
+        &__intro {
+            .text {
+                width: 95%;
+            }
+        }
+        &__item {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    .portfolio {
+        &__item {
+            .item-wrap {
+                .details {
+                    width: 85%;
+                }
+            }
         }
     }
 }
