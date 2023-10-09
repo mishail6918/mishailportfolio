@@ -30,12 +30,6 @@ const menuOpen = function() {
     const nav = document.querySelector('.menu-wrapper');
     const closeBtn = nav.querySelector('.menu-wrapper__close');
 
-    // open-close menu by clicking on the menu icon
-    // menuTrigger.addEventListener('click', function () {
-    //     menuTrigger.classList.toggle('is-clicked');
-    //     body.classList.toggle('menu-is-open');
-    // });
-
     // close menu by clicking the close button
     closeBtn.addEventListener('click', function(e){
         e.preventDefault();
