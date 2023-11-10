@@ -121,12 +121,6 @@ const customCursor = function() {
     gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
     gsap.set(".follower", { xPercent: -50, yPercent: -50 });
 
-    var posX = 0,
-        posY = 0;
-
-    var mouseX = 0,
-        mouseY = 0;
-
     window.addEventListener('mousemove',e => {
         gsap.to(cursor,0.2,{x:e.clientX,y:e.clientY});
         gsap.to(follower,0.9,{x:e.clientX,y:e.clientY});
