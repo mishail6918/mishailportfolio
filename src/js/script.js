@@ -114,8 +114,22 @@ window.onscroll = function() {
     }
 }
 
+const customCursor = function() {
+    const cursor = $(".cursor"),
+        follower = $(".cursor-follower");
+
+    gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+    gsap.set(".follower", { xPercent: -50, yPercent: -50 });
+
+    window.addEventListener('mousemove',e => {
+        gsap.to(cursor,0.2,{x:e.clientX,y:e.clientY});
+        gsap.to(follower,0.9,{x:e.clientX,y:e.clientY});
+    });
+}
+
 preloader();
 menuOpen();
 targetScroll();
 gitLinks();
 animations();
+customCursor();

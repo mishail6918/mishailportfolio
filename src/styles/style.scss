@@ -24,6 +24,7 @@ body
     color: #46474E;
     font-family: "librebaskerville-regular", serif;
     line-height: 1.6;
+    cursor: none;
 }
 
 img {
@@ -88,6 +89,47 @@ a {
 }
 .animate-this {
     opacity: 0;
+}
+.cursor {
+    position: fixed;
+    background-color: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+
+    &.active {
+        opacity: 0.5;
+        transform: scale(0);
+    }
+
+    &.hovered {
+        opacity: 0.08;
+    }
+}
+
+.cursor-follower {
+    position: fixed;
+    background-color: rgb(116 116 116 / 30%);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(5px, 5px);
+
+    &.active {
+        opacity: 0.7;
+        transform: scale(3);
+    }
+
+    &.hovered {
+        opacity: 0.08;
+    }
 }
 @media screen and (max-width: 1280px){
     .container {
