@@ -1,140 +1,142 @@
 .about {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0px;
+  min-height: 900px;
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('@/assets/images/about1-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__profile,
+  &__hobby {
+    width: 50%;
+  }
+  &__profile {
+    padding-right: 50px;
+    z-index: 1;
+  }
+  &__content {
+    .text {
+      margin-bottom: 30px;
+      color: #292a2e;
+    }
+  }
+  &__hobby {
+    padding-left: 50px;
+  }
+  &__intro {
+    text-align: left;
+    .title {
+      color: #050505;
+      font-size: 40px;
+    }
+    .text {
+      font-size: 19px;
+    }
+  }
+  .hobby {
+    .about__content {
+      margin-top: 30px;
+    }
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &__icon {
+      font-size: 35px;
+      color: #a79d86;
+    }
+    &__desc {
+      width: 90%;
+      h4 {
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #151515;
+      }
+    }
+  }
+  .button {
     width: 100%;
-    height: 100vh;
-    padding: 50px 0px;
-    min-height: 900px;
+    height: 54px;
+    background-color: #808080;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-family: 'montserrat-bold', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+    &:hover {
+      background-color: #636363;
+    }
+  }
+  .button-primary {
+    background-color: #030303;
+    color: #fff;
+    &:hover {
+      background-color: #363636;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about {
+    .hobby {
+      &__icon {
+        width: 10%;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    height: auto;
     &__bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 100%;
-        background-image: url("../images/about1-bg.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: .50;
+      width: 100%;
+      height: 52%;
+      background-position: center 70%;
     }
     &__wrapper {
-        display: flex;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
     }
-    &__profile, &__hobby {
-        width: 50%;
+    &__profile,
+    &__hobby {
+      width: 100%;
     }
     &__profile {
-        padding-right: 50px;
-        z-index: 1;
-    }
-    &__content {
-        .text {
-            margin-bottom: 30px;
-            color: #292a2e;
-        }
+      padding-right: 0;
+      padding-bottom: 80px;
     }
     &__hobby {
-        padding-left: 50px;
+      padding-left: 0;
     }
-    &__intro {
-        text-align: left;
-        .title {
-            color: #050505;
-            font-size: 40px;
-        }
-        .text {
-            font-size: 19px;
-        }
-    }
-    .hobby {
-        .about__content {
-            margin-top: 30px;
-        }
-        &__item {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-        }
-        &__icon {
-            font-size: 35px;
-            color: #a79d86;
-        }
-        &__desc {
-            width: 90%;
-            h4 {
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                color: #151515;
-            }
-        }
-    }
-    .button {
-        width: 100%;
-        height: 54px;
-        background-color: #808080;
-        color: #222222;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-        transition: 0.3s;
-        font-family: "montserrat-bold", sans-serif;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-size: 15px;
-        &:hover {
-            background-color: #636363;
-        }
-    }
-    .button-primary {
-        background-color: #030303;
-        color: #fff;
-        &:hover {
-            background-color: #363636;
-        }
-    }
+  }
 }
-@media screen and (max-width: 1024px){
-    .about {
-        .hobby {
-            &__icon {
-                width: 10%;
-                margin-right: 10px;
-            }
-        }
+@media screen and (max-width: 375px) {
+  .about {
+    &__bg {
+      height: 53%;
     }
-}
-@media screen and (max-width: 768px){
-    .about {
-        height: auto;
-        &__bg {
-            width: 100%;
-            height: 52%;
-            background-position: center 70%;
-        }
-        &__wrapper {
-            flex-direction: column;
-            align-items: center;
-        }
-        &__profile, &__hobby {
-            width: 100%;
-        }
-        &__profile {
-            padding-right: 0;
-            padding-bottom: 80px;
-        }
-        &__hobby {
-            padding-left: 0;
-        }
-    }
-}
-@media screen and (max-width: 375px){
-    .about {
-        &__bg {
-            height: 53%;
-        }
-    }
+  }
 }

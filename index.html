@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="/logo.jpg" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"
+    />
+    <script src="https://kit.fontawesome.com/0f8255cf8a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>MK Portfolio</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <header class="header" id="top">
+      <div class="overlay"></div>
+      <div class="gradient-overlay"></div>
+      <div class="header__top">
+        <div class="header__logo">
+          <a href="index.html">MK</a>
+        </div>
+        <a class="menu-btn">
+          <span class="menu-btn__text">Menu</span>
+          <span class="menu-btn__icon"></span>
+        </a>
+        <nav class="menu-wrapper">
+          <div class="menu-wrapper__top">
+            <h3 class="menu-wrapper__title">MK</h3>
+            <a class="menu-wrapper__close" title="close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 28 29"
+                fill="none"
+              >
+                <rect
+                  x="2.125"
+                  y="0.455811"
+                  width="36"
+                  height="3"
+                  transform="rotate(45 2.125 0.455811)"
+                  fill="white"
+                />
+                <rect
+                  y="25.4558"
+                  width="36"
+                  height="3"
+                  transform="rotate(-45 0 25.4558)"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <ul class="nav-list">
+            <li><a class="target-scroll" href="#top" title="">Home</a></li>
+            <li><a href="#about" class="target-scroll" title="">About</a></li>
+            <li><a href="#skills" class="target-scroll" title="">Skills</a></li>
+            <li><a href="#portfolio" class="target-scroll" title="">Works</a></li>
+            <li><a href="#footer" class="target-scroll" title="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__bottom banner">
+        <div class="container">
+          <div class="banner__content">
+            <div class="banner__text">
+              <h3 class="animate-this hello" data-animate="animate__backInDown">Hello, World.</h3>
+              <h1 class="animate-this about-me" data-animate="animate__backInLeft">
+                I am Mikhail Kozlov. <br />
+                Frontend - developer <br />
+                Based in Russia.
+              </h1>
+              <div class="section-links">
+                <span>More <a href="#about" class="target-scroll">About Me</a></span>
+                <span>View <a href="#portfolio" class="target-scroll">My Works</a></span>
+                <span>Contact <a href="mailto:kozlov.mikhail.01@gmail.com">By Email</a></span>
+                <span>And<a href="https://t.me/mishaillllll">Telegram</a></span>
+              </div>
+            </div>
+          </div>
+          <a href="#about" class="scroll-icon target-scroll">
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <div class="about__bg"></div>
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__profile">
+            <div class="about__intro section-intro">
+              <h3 class="pre-title animate-this">About</h3>
+              <h1 class="title animate-this">More About Me.</h1>
+              <p class="text">
+                I like to make decisions on my own, but at the same time I understand the goals of
+                the team and always focus on them. I am always looking for opportunities for
+                self-training.
+              </p>
+            </div>
+            <div class="about__content">
+              <p class="text">
+                I follow the development of the front-end and the IT community as a whole through
+                social networks. I also broaden my horizons by reading articles (habr, blogs of
+                individual community members), and watching video conferences.
+              </p>
+              <p class="text">
+                I have experience in web development - 1.5 years as a frontend developer, both
+                independently and working in a team. I strive to gain valuable experience and new
+                knowledge in development by completing interesting and complex projects. I quickly
+                find a common language in a team, I work well in a team. I'm easy to learn and can
+                understand other people's code.
+              </p>
+              <a href="#footer" class="button target-scroll">Contact Me</a>
+              <a
+                href="/src/assets/docs/Михаил Frontend Резюме.pdf"
+                download
+                class="button button-primary"
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <div class="about__hobby hobby">
+            <div class="about__intro section-intro">
+              <h3 class="pre-title animate-this">Hobbies</h3>
+              <h1 class="title animate-this">What I Do</h1>
+              <p class="text">
+                In addition to development, I enjoy a lot of activities and hobbies in my free time.
+              </p>
+            </div>
+            <div class="about__content">
+              <div class="hobby__item animate-this" data-animate="animate__backInRight">
+                <div class="hobby__icon">
+                  <i class="fa-solid fa-volleyball"></i>
+                </div>
+                <div class="hobby__desc">
+                  <h4>Sports</h4>
+                  <p>
+                    I enjoy active sports: cycling, volleyball, running. Cycling helps me focus on
+                    thoughts and ideas.
+                  </p>
+                </div>
+              </div>
+              <div class="hobby__item animate-this" data-animate="animate__backInRight">
+                <div class="hobby__icon">
+                  <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="hobby__desc">
+                  <h4>Video Games</h4>
+                  <p>I'm sure that video games develop concentration and perseverance.</p>
+                </div>
+              </div>
+              <div class="hobby__item animate-this" data-animate="animate__backInRight">
+                <div class="hobby__icon">
+                  <i class="fa-solid fa-guitar"></i>
+                </div>
+                <div class="hobby__desc">
+                  <h4>Music</h4>
+                  <p>
+                    Playing the guitar since 9 years old provides me the way to beautiful music
+                    world with my favourite singers like Ed Sheeran, Rick Astley or Elvis Presley.
+                  </p>
+                </div>
+              </div>
+              <div class="hobby__item animate-this" data-animate="animate__backInRight">
+                <div class="hobby__icon">
+                  <i class="fa-solid fa-book"></i>
+                </div>
+                <div class="hobby__desc">
+                  <h4>Reading</h4>
+                  <p>
+                    Some tech literature and imaginative literature I love so much. Dmitry
+                    Glukhovsky, Mario Puzo and Jason Shreier are recommended by me.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="skills__content">
+          <div class="skills__intro section-intro">
+            <h3 class="pre-title animate-this">Skillset</h3>
+            <h1 class="title animate-this">I've Got Some Skills.</h1>
+            <p class="text">
+              During the learning process and performing educational and work projects I got hard
+              skills in web development sphere. Gained an understanding of how the browser works and
+              how HTTP protocol works, gained experience working with VCS and other useful
+              technologies.
+            </p>
+          </div>
+          <ul class="skills__bars">
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent85"></div>
+              <strong>HTML5</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent85"></div>
+              <strong>CSS3</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent85"></div>
+              <strong>SCSS/SASS</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent70"></div>
+              <strong>JavaScript</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent60"></div>
+              <strong>Vue JS</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent50"></div>
+              <strong>React</strong>
+            </li>
+            <li class="animate-this" data-animate="animate__fadeInRight">
+              <div class="progress percent70"></div>
+              <strong>Webpack / Gulp / Vite</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-intro portfolio__intro">
+          <h3 class="pre-title animate-this">Portfolio</h3>
+          <h2 class="title animate-this">See my latest projects</h2>
+          <p class="text">
+            Projects performed by the latest time. <br />
+            There are personal pet projects and commercial here too.
+          </p>
+        </div>
+        <div class="portfolio__content">
+          <div class="portfolio__item animate-this">
+            <div class="item-wrap">
+              <a
+                href="https://github.com/mishail6918/vue-task-track"
+                class="overlay"
+                target="_blank"
+              >
+                <img src="/src/assets/images/tasks.jpeg" alt="" />
+                <div class="details">
+                  <span class="details__title">Tracking task list</span>
+                  <p class="details__desc">SPA on vue.js for tracking your tasks</p>
+                </div>
+              </a>
+              <a
+                href="https://github.com/mishail6918/vue-task-track"
+                class="repo-link"
+                target="_blank"
+              >
+                Github
+                <i class="fa-solid fa-arrow-turn-up"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__item animate-this">
+            <div class="item-wrap">
+              <a href="" class="overlay" target="_blank">
+                <img src="/src/assets/images/novell.png" alt="" />
+                <div class="details">
+                  <span class="details__title">WebView editor engine for visual novel</span>
+                  <p class="details__desc">
+                    WebView editor engine for creating a visual novel. React, Nest and TypeScript
+                    <br />
+                    In developing...
+                  </p>
+                </div>
+              </a>
+              <a href="" class="repo-link" target="_blank">
+                Github
+                <i class="fa-solid fa-arrow-turn-up"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__item animate-this">
+            <div class="item-wrap">
+              <a href="https://biograff.ru/" class="overlay" target="_blank">
+                <img src="/src/assets/images/biograff.png" alt="" />
+                <div class="details">
+                  <span class="details__title">Biograff.ru</span>
+                  <p class="details__desc">
+                    Information portal for searching memorials of famous people, <br />using Bitrix,
+                    JavaScript, PHP
+                  </p>
+                </div>
+              </a>
+              <a href="" class="repo-link" target="_blank">
+                Github
+                <i class="fa-solid fa-arrow-turn-up"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__item animate-this">
+            <div class="item-wrap">
+              <a
+                href="https://mishail6918.github.io/loc-weather-api/"
+                class="overlay"
+                target="_blank"
+              >
+                <img src="/src/assets/images/weather.jpg" alt="" />
+                <div class="details">
+                  <span class="details__title">Loc Weather App</span>
+                  <p class="details__desc">
+                    Weather App on native JavaScript, using Ajax with OpenWeather API
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://github.com/mishail6918/loc-weather-api"
+                class="repo-link"
+                target="_blank"
+              >
+                Github
+                <i class="fa-solid fa-arrow-turn-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <footer class="footer" id="footer">
+      <div id="go-top">
+        <a class="target-scroll" href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+      <div class="container">
+        <div class="section-intro footer__intro">
+          <h3 class="pre-title animate-this">Contact</h3>
+          <h2 class="title animate-this">Feel Free to Contact Me.</h2>
+        </div>
+        <div class="contact">
+          <div class="contact__item">
+            <h5 class="contact__title">Email me at</h5>
+            <a class="contact__link" href="mailto:kozlov.mikhail.01@gmail.com"
+              >kozlov.mikhail.01@gmail.com</a
+            >
+          </div>
+          <div class="contact__item">
+            <h5 class="contact__title">Text me at</h5>
+            <a class="contact__link" href="https://t.me/mishaillllll">Telegram</a>
+          </div>
+          <div class="contact__item">
+            <h5 class="contact__title">Call me at</h5>
+            <p class="contact__link">+7 (902) 101 89 56</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
